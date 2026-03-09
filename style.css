@@ -945,6 +945,40 @@
             margin-bottom: 10px;
         }
 
+        .filters-toggle {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 2px;
+            margin-bottom: 14px;
+        }
+
+        .filter-open-btn {
+            border: 1.5px solid var(--blue);
+            background: var(--blue);
+            color: white;
+            border-radius: 100px;
+            padding: 9px 18px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-open-btn:hover {
+            background: var(--navy);
+            border-color: var(--navy);
+        }
+
+        .filter-open-btn:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 2px;
+        }
+
+        .filters-panel {
+            margin-bottom: 6px;
+        }
+
         .filter-tabs-degree {
             margin-bottom: 10px;
         }

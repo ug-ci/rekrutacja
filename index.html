@@ -109,36 +109,41 @@
                     </button>
                 </div>
             </div>
-            <div class="filter-tabs reveal" data-filter-group="category">
-                <div class="filter-title">Kategorie:</div>
-                <div class="filter-tab" data-filter-value="scisle-techniczne">Nauki ścisłe i techniczne</div>
-                <div class="filter-tab" data-filter-value="biologiczne-przyrodnicze">Nauki biologiczne i przyrodnicze</div>
-                <div class="filter-tab" data-filter-value="ekonomiczne">Nauki ekonomiczne</div>
-                <div class="filter-tab" data-filter-value="spoleczne-prawne">Nauki społeczne i prawne</div>
-                <div class="filter-tab" data-filter-value="medyczne-pedagogiczne">Nauki medyczne i pedagogiczne</div>
+            <div class="filters-toggle reveal">
+                <button type="button" class="filter-open-btn" id="toggleFilters" aria-expanded="false" aria-controls="filtersPanel">Filtruj</button>
             </div>
-            <div class="filter-tabs filter-tabs-degree reveal" data-filter-group="level">
-                <div class="filter-title">Stopień:</div>
-                <div class="filter-tab" data-filter-value="i">I stopnia</div>
-                <div class="filter-tab" data-filter-value="ii">II stopnia</div>
-                <div class="filter-tab" data-filter-value="jednolite">jednolite magisterskie</div>
-                <div class="filter-tab" data-filter-value="doktoraty">doktoraty</div>
-                <div class="filter-tab" data-filter-value="podyplomowe">podyplomowe</div>
-            </div>
-            <div class="filter-tabs filter-tabs-mode reveal" data-filter-group="mode">
-                <div class="filter-title">Tryb:</div>
-                <div class="filter-tab" data-filter-value="stacjonarne">stacjonarne</div>
-                <div class="filter-tab" data-filter-value="zaoczne">zaoczne</div>
-                <div class="filter-tab" data-filter-value="wieczorowe">wieczorowe</div>
-                <div class="filter-tab" data-filter-value="sea-eu">studia wspólne w ramach SEA-EU</div>
-            </div>
-            <div class="filter-tabs filter-tabs-lang reveal" data-filter-group="lang">
-                <div class="filter-title">Język:</div>
-                <div class="filter-tab" data-filter-value="polski">polski</div>
-                <div class="filter-tab" data-filter-value="angielski">angielski</div>
-            </div>
-            <div class="filters-actions reveal">
-                <button type="button" class="filter-reset-btn" id="resetFilters">Resetuj filtry</button>
+            <div class="filters-panel" id="filtersPanel" hidden>
+                <div class="filter-tabs reveal" data-filter-group="category">
+                    <div class="filter-title">Kategorie:</div>
+                    <div class="filter-tab" data-filter-value="scisle-techniczne">Nauki ścisłe i techniczne</div>
+                    <div class="filter-tab" data-filter-value="biologiczne-przyrodnicze">Nauki biologiczne i przyrodnicze</div>
+                    <div class="filter-tab" data-filter-value="ekonomiczne">Nauki ekonomiczne</div>
+                    <div class="filter-tab" data-filter-value="spoleczne-prawne">Nauki społeczne i prawne</div>
+                    <div class="filter-tab" data-filter-value="medyczne-pedagogiczne">Nauki medyczne i pedagogiczne</div>
+                </div>
+                <div class="filter-tabs filter-tabs-degree reveal" data-filter-group="level">
+                    <div class="filter-title">Stopień:</div>
+                    <div class="filter-tab" data-filter-value="i">I stopnia</div>
+                    <div class="filter-tab" data-filter-value="ii">II stopnia</div>
+                    <div class="filter-tab" data-filter-value="jednolite">jednolite magisterskie</div>
+                    <div class="filter-tab" data-filter-value="doktoraty">doktoraty</div>
+                    <div class="filter-tab" data-filter-value="podyplomowe">podyplomowe</div>
+                </div>
+                <div class="filter-tabs filter-tabs-mode reveal" data-filter-group="mode">
+                    <div class="filter-title">Tryb:</div>
+                    <div class="filter-tab" data-filter-value="stacjonarne">stacjonarne</div>
+                    <div class="filter-tab" data-filter-value="zaoczne">zaoczne</div>
+                    <div class="filter-tab" data-filter-value="wieczorowe">wieczorowe</div>
+                    <div class="filter-tab" data-filter-value="sea-eu">studia wspólne w ramach SEA-EU</div>
+                </div>
+                <div class="filter-tabs filter-tabs-lang reveal" data-filter-group="lang">
+                    <div class="filter-title">Język:</div>
+                    <div class="filter-tab" data-filter-value="polski">polski</div>
+                    <div class="filter-tab" data-filter-value="angielski">angielski</div>
+                </div>
+                <div class="filters-actions reveal">
+                    <button type="button" class="filter-reset-btn" id="resetFilters">Resetuj filtry</button>
+                </div>
             </div>
             <div class="kierunki-grid" id="kierunkiGrid"></div>
             <div class="kierunki-pagination reveal" id="kierunkiPagination" aria-label="Paginacja kierunków"></div>

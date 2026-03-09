@@ -518,6 +518,21 @@ Zarządzanie, studia niestacjonarne - zaoczne II stopnia
             applyKierunkiFilters(true);
         });
 
+        document.getElementById('toggleFilters')?.addEventListener('click', () => {
+            const panel = document.getElementById('filtersPanel');
+            const button = document.getElementById('toggleFilters');
+            if (!panel || !button) return;
+
+            const isHidden = panel.hasAttribute('hidden');
+            if (isHidden) {
+                panel.removeAttribute('hidden');
+                button.setAttribute('aria-expanded', 'true');
+            } else {
+                panel.setAttribute('hidden', '');
+                button.setAttribute('aria-expanded', 'false');
+            }
+        });
+
         document.getElementById('resetFilters')?.addEventListener('click', () => {
             document.querySelectorAll('.filter-tabs[data-filter-group] .filter-tab.active')
                 .forEach(tab => tab.classList.remove('active'));
