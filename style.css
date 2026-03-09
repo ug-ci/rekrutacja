@@ -1087,6 +1087,14 @@
             outline-offset: 2px;
         }
 
+        .pagination-sep {
+            color: var(--light);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            user-select: none;
+        }
+
         .k-card {
             background: white;
             border: 1.5px solid var(--border);

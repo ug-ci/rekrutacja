@@ -22,6 +22,355 @@
             if (!was) item.classList.add('open');
         }
 
+        const kierunkiRawData = `
+Studia interdyscyplinarne
+Studia stacjonarne
+Indywidualne Studia Międzydziedzinowe , studia stacjonarne I stopnia
+Indywidualne Studia Międzydziedzinowe, studia stacjonarne II stopnia
+Międzyuczelniany Wydział Biotechnologii UG i GUMed
+Studia stacjonarne
+Biotechnologia, studia stacjonarne I stopnia
+Biotechnologia, studia stacjonarne II stopnia
+Wydział Biologii
+Studia stacjonarne
+Biologia, studia stacjonarne I stopnia
+Biologia, studia stacjonarne II stopnia
+Biologia medyczna, studia stacjonarne I stopnia
+Biologia medyczna, studia stacjonarne II stopnia
+Genetyka i biologia eksperymentalna, studia stacjonarne I stopnia
+Ochrona zasobów przyrodniczych, studia stacjonarne I stopnia
+Wydział Chemii
+Studia stacjonarne
+Analityka kryminalistyczna, studia stacjonarne I stopnia
+Biznes chemiczny, studia stacjonarne II stopnia
+Biznes chemiczny studia inżynierskie, studia stacjonarne I stopnia
+Chemia, studia stacjonarne I stopnia
+Chemia, studia stacjonarne II stopnia
+Chemia, specjalność Digital Chemistry, studia stacjonarne II stopnia
+Ochrona środowiska, studia stacjonarne I stopnia
+Ochrona środowiska, studia stacjonarne II stopnia
+Wydział Ekonomiczny
+Studia stacjonarne
+Biznes i technologia ekologiczna, studia stacjonarne II stopnia
+Ekonomia, studia stacjonarne I stopnia
+Ekonomia, studia stacjonarne II stopnia
+International Business, studia stacjonarne I stopnia
+International Business, studia stacjonarne II stopnia
+Logistics and mobility, studia stacjonarne I stopnia
+Logistics and Mobility, studia stacjonarne II stopnia
+Międzynarodowe stosunki gospodarcze, studia stacjonarne I stopnia
+Międzynarodowe stosunki gospodarcze, studia stacjonarne II stopnia
+Studia niestacjonarne - zaoczne
+Ekonomia, studia niestacjonarne - zaoczne I stopnia
+Ekonomia, studia niestacjonarne - zaoczne II stopnia
+Międzynarodowe stosunki gospodarcze, studia niestacjonarne - zaoczne I stopnia
+Międzynarodowe stosunki gospodarcze, studia niestacjonarne - zaoczne II stopnia
+Wydział Filologiczny
+Studia stacjonarne
+Amerykanistyka, studia stacjonarne I stopnia
+Amerykanistyka, studia stacjonarne II stopnia
+Cultural Communication, studia stacjonarne I stopnia
+Etnofilologia kaszubska, studia stacjonarne I stopnia
+Filologia angielska, studia stacjonarne I stopnia
+Filologia angielska, studia stacjonarne II stopnia
+Filologia germańska, studia stacjonarne I stopnia
+Filologia germańska, studia stacjonarne II stopnia
+Filologia klasyczna, studia stacjonarne I stopnia
+Filologia klasyczna, studia stacjonarne II stopnia
+Filologia polska, studia stacjonarne I stopnia
+Filologia polska, studia stacjonarne II stopnia
+Filologia romańska (z drugim językiem romańskim), studia stacjonarne I stopnia
+Filologia romańska i iberystyka, studia stacjonarne II stopnia
+Filologia rosyjska, studia stacjonarne I stopnia
+Filologia rosyjska, studia stacjonarne II stopnia
+Iberystyka, studia stacjonarne I stopnia
+Japonistyka, studia stacjonarne I stopnia
+Kulturoznawstwo, studia stacjonarne I stopnia
+Kulturoznawstwo, studia stacjonarne II stopnia
+Lingwistyka stosowana, studia stacjonarne I stopnia
+Lingwistyka stosowana, studia stacjonarne II stopnia
+Logopedia, studia stacjonarne jednolite magisterskie
+Produkcja form audiowizualnych, studia stacjonarne I stopnia
+Rosjoznawstwo, studia stacjonarne I stopnia
+Sinologia, studia stacjonarne I stopnia
+Skandynawistyka - duńska lub fińska ścieżka językowa, studia stacjonarne I stopnia
+Skandynawistyka - norweska lub szwedzka ścieżka językowa, studia stacjonarne I stopnia
+Skandynawistyka, studia stacjonarne II stopnia
+Slawistyka, studia stacjonarne I stopnia
+Slawistyka, studia stacjonarne II stopnia
+Studia bałkańskie, studia stacjonarne I stopnia
+Studia wschodnie, studia stacjonarne I stopnia
+Sztuka kreatywnego pisania, studia stacjonarne I stopnia
+Wiedza o filmie i kulturze audiowizualnej, studia stacjonarne I stopnia
+Wiedza o filmie i kulturze audiowizualnej, studia stacjonarne II stopnia
+Wiedza o teatrze, studia stacjonarne I stopnia
+Zarządzanie i komunikacja w sztukach scenicznych, studia stacjonarne II stopnia
+Zarządzanie instytucjami artystycznymi, specjalność menedżerska, studia stacjonarne I stopnia
+Studia niestacjonarne - zaoczne
+Filologia angielska, studia niestacjonarne - zaoczne II stopnia
+Filologia germańska, studia niestacjonarne - zaoczne I stopnia
+Lingwistyka stosowana, studia niestacjonarne - zaoczne I stopnia
+Logopedia, studia niestacjonarne - zaoczne II stopnia
+Produkcja form audiowizualnych, studia niestacjonarne - zaoczne I stopnia
+Wiedza o filmie i kulturze audiowizualnej, studia niestacjonarne - zaoczne I stopnia
+Wydział Historyczny
+Studia stacjonarne
+Archeologia, studia stacjonarne I stopnia
+Archeologia, studia stacjonarne II stopnia
+Etnologia, studia stacjonarne I stopnia
+Etnologia, studia stacjonarne II stopnia
+Historia, studia stacjonarne I stopnia
+Historia, studia stacjonarne II stopnia
+Historia sztuki, studia stacjonarne I stopnia
+Historia sztuki, studia stacjonarne II stopnia
+Krajoznawstwo i turystyka historyczna, studia stacjonarne I stopnia
+Krajoznawstwo i turystyka historyczna, studia stacjonarne II stopnia
+Niemcoznawstwo, studia stacjonarne I stopnia
+Ochrona dóbr kultury i muzealnictwo, studia stacjonarne I stopnia
+Projektowanie gier historycznych, studia stacjonarne I stopnia
+Religioznawstwo, studia stacjonarne I stopnia
+Religioznawstwo, studia stacjonarne II stopnia
+Studia niestacjonarne - zaoczne
+Historia, studia niestacjonarne - zaoczne I stopnia
+Historia, studia niestacjonarne - zaoczne II stopnia
+Historia sztuki, studia niestacjonarne - zaoczne I stopnia
+Wydział Matematyki, Fizyki i Informatyki
+Studia stacjonarne
+Bezpieczeństwo jądrowe i ochrona radiologiczna, studia stacjonarne I stopnia
+Bioinformatyka, studia stacjonarne I stopnia
+Fizyka, studia stacjonarne I stopnia
+Fizyka, studia stacjonarne II stopnia
+Fizyka medyczna, studia stacjonarne I stopnia
+Fizyka medyczna, studia stacjonarne II stopnia
+Informatyka, profil ogólnoakademicki, studia stacjonarne I stopnia
+Informatyka, profil ogólnoakademicki, studia stacjonarne II stopnia
+Informatyka, profil praktyczny, studia stacjonarne I stopnia
+Matematyka, studia stacjonarne I stopnia
+Matematyka, studia stacjonarne II stopnia
+Modelowanie matematyczne i analiza danych, studia stacjonarne I stopnia
+Modelowanie matematyczne i analiza danych, studia stacjonarne II stopnia
+Quantum Information Technology, studia stacjonarne II stopnia
+Studia niestacjonarne - zaoczne
+Informatyka, profil ogólnoakademicki, studia niestacjonarne - zaoczne I stopnia
+Informatyka, profil ogólnoakademicki, studia niestacjonarne - zaoczne II stopnia
+Wydział Nauk Społecznych
+Studia stacjonarne
+Bezpieczeństwo narodowe, studia stacjonarne I stopnia
+Bezpieczeństwo narodowe, studia stacjonarne II stopnia
+Dyplomacja, studia stacjonarne I stopnia
+Dziennikarstwo i komunikacja społeczna, studia stacjonarne I stopnia
+Dziennikarstwo i komunikacja społeczna, studia stacjonarne II stopnia
+Filozofia, studia stacjonarne I stopnia
+Filozofia, studia stacjonarne II stopnia
+Geografia społeczno-ekonomiczna z elementami GIS, studia stacjonarne II stopnia
+Global Studies, studia stacjonarne II stopnia
+Gospodarka przestrzenna, studia stacjonarne I stopnia
+Gospodarka przestrzenna, studia stacjonarne II stopnia
+Pedagogika, studia stacjonarne I stopnia
+Pedagogika, studia stacjonarne II stopnia
+Pedagogika przedszkolna i wczesnoszkolna, studia stacjonarne jednolite magisterskie
+Pedagogika specjalna, studia stacjonarne jednolite magisterskie
+Politologia, studia stacjonarne I stopnia
+Politologia, studia stacjonarne II stopnia
+Praca socjalna, studia stacjonarne I stopnia
+Praca socjalna, studia stacjonarne II stopnia
+Psychologia, studia stacjonarne jednolite magisterskie
+Socjologia, studia stacjonarne I stopnia
+Socjologia, studia stacjonarne II stopnia
+Solidarity Studies, studia stacjonarne II stopnia
+Tourism and Hospitality, studia stacjonarne II stopnia
+Wydział Oceanografii i Geografii
+Studia stacjonarne
+Akwakultura - biznes i technologia, studia stacjonarne I stopnia
+Geografia, studia stacjonarne I stopnia
+Geografia fizyczna z geoinformacją, studia stacjonarne II stopnia
+Geologia, studia stacjonarne I stopnia
+Gospodarka wodna i ochrona zasobów wód, studia stacjonarne I stopnia
+Hydrografia morska studia inżynierskie, studia stacjonarne I stopnia
+Marine Biotechnology, studia stacjonarne II stopnia
+Oceanografia, studia stacjonarne I stopnia
+Oceanografia, studia stacjonarne II stopnia
+Wydział Prawa i Administracji
+Studia stacjonarne
+Administracja, studia stacjonarne I stopnia
+Administracja, studia stacjonarne II stopnia
+Criminology and Criminal Justice, studia stacjonarne I stopnia
+Kryminologia, studia stacjonarne I stopnia
+Kryminologia, studia stacjonarne II stopnia
+Podatki i doradztwo podatkowe, studia stacjonarne I stopnia
+Prawo, studia stacjonarne jednolite magisterskie
+Prawo w sporcie, studia stacjonarne I stopnia
+Studia niestacjonarne - zaoczne
+Administracja, studia niestacjonarne - zaoczne I stopnia
+Kryminologia, studia niestacjonarne - zaoczne I stopnia
+Kryminologia, studia niestacjonarne - zaoczne II stopnia
+Podatki i doradztwo podatkowe, studia niestacjonarne - zaoczne I stopnia
+Podatki i doradztwo podatkowe, studia niestacjonarne - zaoczne II stopnia
+Prawo, studia niestacjonarne - zaoczne jednolite magisterskie
+Prawo w administracji i gospodarce, studia niestacjonarne - zaoczne II stopnia
+Wydział Zarządzania
+Studia stacjonarne
+Finanse i rachunkowość, studia stacjonarne I stopnia
+Finanse i rachunkowość, specjalność Financial Analyst, studia stacjonarne I stopnia
+Finanse i rachunkowość, studia stacjonarne II stopnia
+Finanse i rachunkowość, specjalność Finance and Accounting, studia stacjonarne II stopnia
+Informatyka i ekonometria, studia stacjonarne I stopnia
+Informatyka i ekonometria, studia stacjonarne II stopnia
+Informatyka i ekonometria specjalność: Digital Transformation, studia stacjonarne II stopnia
+Zarządzanie, studia stacjonarne I stopnia
+Zarządzanie, studia stacjonarne II stopnia
+Zarządzanie instytucjami służby zdrowia, studia stacjonarne I stopnia
+Zarządzanie w sporcie - studia menedżerskie, studia stacjonarne I stopnia
+Zarządzanie, specjalność Management, studia stacjonarne II stopnia
+Studia niestacjonarne - zaoczne
+Finanse i rachunkowość, studia niestacjonarne - zaoczne I stopnia
+Finanse i rachunkowość, studia niestacjonarne - zaoczne II stopnia
+Informatyka i ekonometria, studia niestacjonarne - zaoczne I stopnia
+Informatyka i ekonometria, studia niestacjonarne - zaoczne II stopnia
+Zarządzanie, studia niestacjonarne - zaoczne I stopnia
+Zarządzanie, studia niestacjonarne - zaoczne II stopnia
+`;
+
+        function escapeHtml(text) {
+            return text
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#39;');
+        }
+
+        function inferCategories(faculty, name) {
+            const categories = new Set();
+            const facultyText = `${faculty} ${name}`;
+
+            if (/Matematyki|Fizyki|Informatyki|Chemii/i.test(facultyText)) categories.add('scisle-techniczne');
+            if (/Biologii|Oceanografii|Biotechnologii|Geologii|Geografia/i.test(facultyText)) categories.add('biologiczne-przyrodnicze');
+            if (/Ekonomiczny|Zarządzania|ekonom/i.test(facultyText)) categories.add('ekonomiczne');
+            if (/Prawa|Filologiczny|Historyczny|Nauk Społecznych|interdyscyplinarne/i.test(facultyText)) categories.add('spoleczne-prawne');
+            if (/Pedagogika|Psychologia|medyczna|Logopedia|służby zdrowia/i.test(facultyText)) categories.add('medyczne-pedagogiczne');
+
+            if (!categories.size) categories.add('spoleczne-prawne');
+            return Array.from(categories);
+        }
+
+        function inferLanguage(name) {
+            return /(International|Logistics|Mobility|Global Studies|Tourism and Hospitality|Solidarity Studies|Criminology and Criminal Justice|Quantum Information Technology|Marine Biotechnology|Cultural Communication|Financial Analyst|Finance and Accounting|Management|Digital Transformation)/i.test(name)
+                ? 'angielski'
+                : 'polski';
+        }
+
+        function parseKierunkiData(rawData) {
+            const programs = [];
+            const lines = rawData.split('\n').map(line => line.trim()).filter(Boolean);
+            let currentFaculty = 'Oferta UG';
+            let currentMode = 'stacjonarne';
+
+            lines.forEach(line => {
+                if (/^Wydział|^Międzyuczelniany Wydział|^Studia interdyscyplinarne$/i.test(line)) {
+                    currentFaculty = line;
+                    return;
+                }
+
+                if (/^Studia stacjonarne$/i.test(line)) {
+                    currentMode = 'stacjonarne';
+                    return;
+                }
+
+                if (/^Studia niestacjonarne - zaoczne$/i.test(line)) {
+                    currentMode = 'zaoczne';
+                    return;
+                }
+
+                if (/^Studia niestacjonarne - wieczorowe$/i.test(line)) {
+                    currentMode = 'wieczorowe';
+                    return;
+                }
+
+                if (!/studia/i.test(line)) return;
+
+                const level = /jednolite magisterskie/i.test(line)
+                    ? 'jednolite'
+                    : /II stopnia/i.test(line)
+                        ? 'ii'
+                        : /I stopnia/i.test(line)
+                            ? 'i'
+                            : 'i';
+
+                const mode = /niestacjonarne - zaoczne/i.test(line)
+                    ? 'zaoczne'
+                    : /niestacjonarne - wieczorowe/i.test(line)
+                        ? 'wieczorowe'
+                        : /stacjonarne/i.test(line)
+                            ? 'stacjonarne'
+                            : currentMode;
+
+                const name = line.replace(/,\s*studia.*$/i, '').replace(/\s+,/g, ',').trim();
+                const categories = inferCategories(currentFaculty, name);
+                const lang = inferLanguage(name);
+                const modeValues = [mode];
+
+                if (lang === 'angielski' && /(International|Logistics|Global Studies|Tourism and Hospitality|Marine Biotechnology|Criminology and Criminal Justice|Solidarity Studies)/i.test(name)) {
+                    modeValues.push('sea-eu');
+                }
+
+                programs.push({
+                    faculty: currentFaculty,
+                    name,
+                    level,
+                    mode: modeValues,
+                    lang,
+                    categories
+                });
+            });
+
+            return programs;
+        }
+
+        function levelLabel(level) {
+            if (level === 'i') return 'I stopnia';
+            if (level === 'ii') return 'II stopnia';
+            if (level === 'jednolite') return 'jednolite magisterskie';
+            if (level === 'doktoraty') return 'doktoraty';
+            if (level === 'podyplomowe') return 'podyplomowe';
+            return level;
+        }
+
+        function modeLabel(values) {
+            if (values.includes('wieczorowe')) return 'niestacjonarne - wieczorowe';
+            if (values.includes('zaoczne')) return 'niestacjonarne - zaoczne';
+            if (values.includes('sea-eu')) return 'studia wspólne SEA-EU';
+            return 'stacjonarne';
+        }
+
+        function renderKierunkiCards() {
+            const grid = document.getElementById('kierunkiGrid');
+            if (!grid) return;
+
+            const programs = parseKierunkiData(kierunkiRawData);
+
+            grid.innerHTML = programs.map(program => `
+                <div class="k-card reveal" data-category="${program.categories.join(',')}" data-level="${program.level}" data-mode="${program.mode.join(',')}" data-lang="${program.lang}">
+                    <div class="k-faculty">${escapeHtml(program.faculty)}</div>
+                    <div class="k-name">${escapeHtml(program.name)}</div>
+                    <div class="k-meta">
+                        <span class="k-badge badge-deg">${escapeHtml(levelLabel(program.level))}</span>
+                        <span class="k-badge badge-pop">${escapeHtml(modeLabel(program.mode))}</span>
+                    </div>
+                    <div class="k-footer">
+                        <div class="k-points">Język: <strong>${escapeHtml(program.lang)}</strong></div>
+                        <div class="k-arrow"><svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></div>
+                    </div>
+                </div>
+            `).join('');
+
+            grid.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+        }
+
+        renderKierunkiCards();
+
         // Kierunki filters + search
         const kierunkiState = {
             category: 'all',
@@ -33,7 +382,7 @@
 
         const paginationState = {
             currentPage: 1,
-            pageSize: 6
+            pageSize: 12
         };
 
         function matchesFilter(values, selected) {
@@ -71,13 +420,36 @@
 
             container.style.display = 'flex';
 
-            let html = `<button type="button" class="pagination-btn" data-page="${paginationState.currentPage - 1}" ${paginationState.currentPage === 1 ? 'disabled' : ''}>Poprzednia</button>`;
+            const pageItems = [];
+            const current = paginationState.currentPage;
 
-            for (let page = 1; page <= totalPages; page++) {
-                html += `<button type="button" class="pagination-btn ${page === paginationState.currentPage ? 'active' : ''}" data-page="${page}">${page}</button>`;
+            if (totalPages <= 7) {
+                for (let page = 1; page <= totalPages; page++) pageItems.push(page);
+            } else {
+                if (current <= 3) {
+                    pageItems.push(1, 2, 3, 'dots', totalPages);
+                } else if (current >= totalPages - 2) {
+                    pageItems.push(1, 'dots', totalPages - 2, totalPages - 1, totalPages);
+                } else {
+                    pageItems.push(1, 'dots', current - 1, current, current + 1, 'dots', totalPages);
+                }
             }
 
-            html += `<button type="button" class="pagination-btn" data-page="${paginationState.currentPage + 1}" ${paginationState.currentPage === totalPages ? 'disabled' : ''}>Następna</button>`;
+            let html = `<button type="button" class="pagination-btn" data-page="${current - 1}" ${current === 1 ? 'disabled' : ''}>Poprzedni</button>`;
+
+            pageItems.forEach((item, index) => {
+                if (item === 'dots') {
+                    html += `<span class="pagination-sep" aria-hidden="true">...</span>`;
+                } else {
+                    html += `<button type="button" class="pagination-btn ${item === current ? 'active' : ''}" data-page="${item}">${item}</button>`;
+                }
+
+                if (index < pageItems.length - 1) {
+                    html += `<span class="pagination-sep" aria-hidden="true">|</span>`;
+                }
+            });
+
+            html += `<button type="button" class="pagination-btn" data-page="${current + 1}" ${current === totalPages ? 'disabled' : ''}>Następny</button>`;
             container.innerHTML = html;
         }
 
