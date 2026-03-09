@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opis kierunku — UG Rekrutacja 2026/2027</title>
+    <title>Biologia — Opis kierunku | UG Rekrutacja 2025/2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,7 +14,7 @@
     <script src="opis-kierunku.js" defer></script>
 </head>
 
-<body>
+<body class="kierunek-page">
 
     <div class="mobile-menu" id="mobileMenu">
         <a href="index.html#kierunki">Kierunki</a>
@@ -61,12 +61,12 @@
             <div>
                 <div class="hero-badge">
                     <span class="dot"></span>
-                    Opis kierunku
+                    Rok akademicki 2025/26
                 </div>
-                <h1 class="hero-title"><span id="kierunekName">Informatyka</span></h1>
+                <h1 class="hero-title"><span id="kierunekName">Biologia</span></h1>
                 <p class="hero-desc">
-                    Poznaj profil studiów, wymagania i perspektywy po ukończeniu kierunku. Strona prezentuje skrót
-                    najważniejszych informacji dla kandydatów.
+                    Absolwent będzie posiadał wiedzę, umiejętności i kompetencje z zakresu ogólnych zagadnień biologii,
+                    opartych na podstawach nauk matematyczno-przyrodniczych, pogłębione o dodatkowe umiejętności praktyczne.
                 </p>
                 <div class="hero-actions">
                     <a href="https://irk.ug.edu.pl" class="btn-primary">Aplikuj w IRK</a>
@@ -82,11 +82,15 @@
                         <div class="hero-stat-label">tryb</div>
                     </div>
                     <div>
-                        <div class="hero-stat-num" id="kierunekLang">polski</div>
+                        <div class="hero-stat-num" id="kierunekLang">polski / angielski</div>
                         <div class="hero-stat-label">język</div>
                     </div>
                     <div>
-                        <div class="hero-stat-num">2026/27</div>
+                        <div class="hero-stat-num">Wydział Biologii UG</div>
+                        <div class="hero-stat-label">jednostka</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">2025/26</div>
                         <div class="hero-stat-label">nabór</div>
                     </div>
                 </div>
@@ -103,27 +107,16 @@
                             </svg>
                         </div>
                         <div>
-                            <div class="hc-title">Jednostka prowadząca</div>
-                            <div class="hc-sub" id="kierunekFaculty">Wydział Matematyki, Fizyki i Informatyki</div>
+                            <div class="hc-title">Szybkie linki</div>
+                            <div class="hc-sub">Przejdź do wybranych informacji</div>
                         </div>
                     </div>
-                    <div class="progress-item">
-                        <div class="prog-label"><span>Profil</span><span>ogólnoakademicki</span></div>
-                        <div class="prog-bar">
-                            <div class="prog-fill" style="width:92%"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="prog-label"><span>Nastawienie na praktykę</span><span>wysokie</span></div>
-                        <div class="prog-bar">
-                            <div class="prog-fill" style="width:84%"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="prog-label"><span>Kompetencje językowe</span><span>PL/EN</span></div>
-                        <div class="prog-bar">
-                            <div class="prog-fill" style="width:76%"></div>
-                        </div>
+                    <div class="k-links hero-quick-links" style="margin-top:0">
+                        <a href="#kontakt-wydzial">Kontakt rekrutacyjny</a>
+                        <a href="#kontakt">Kryteria przyjęć</a>
+                        <a href="#oplaty">Opłaty</a>
+                        <a href="http://ug.edu.pl/rekrutacja/studia_i_i_ii_stopnia_oraz_jednolite_magisterskie/niezbednik_kandydata/dokumenty#d1">Wymagane dokumenty</a>
+                        <a href="#osoby-na-miejsce">Ilość osób na miejsce</a>
                     </div>
                 </div>
             </div>
@@ -133,10 +126,8 @@
     <section class="section section-alt">
         <div class="container">
             <div class="sec-header reveal">
-                <div class="eyebrow">Dlaczego warto</div>
-                <h2 class="sec-title">Co zyskasz na tym kierunku?</h2>
-                <p class="sec-sub">Program łączy fundamenty teoretyczne z praktycznymi projektami i współpracą z
-                    otoczeniem społeczno-gospodarczym regionu.</p>
+                <div class="eyebrow">Opis</div>
+                <h2 class="sec-title">Atuty kierunku</h2>
             </div>
             <div class="wydzialy-grid">
                 <div class="w-card reveal">
@@ -147,9 +138,9 @@
                                 stroke-linecap="round" />
                         </svg>
                     </div>
-                    <div class="w-name">Umiejętności praktyczne</div>
-                    <div class="w-meta">Praca projektowa od pierwszych semestrów</div>
-                    <div class="w-tags"><span class="w-tag">projekty</span><span class="w-tag">laboratoria</span>
+                    <div class="w-name">3-tygodniowa praktyka zawodowa</div>
+                    <div class="w-meta">Na studiach I stopnia studenci realizują obowiązkową praktykę zawodową.</div>
+                    <div class="w-tags"><span class="w-tag">praktyka</span><span class="w-tag">doświadczenie</span>
                     </div>
                 </div>
                 <div class="w-card reveal d1">
@@ -159,9 +150,9 @@
                                 stroke-width="2" />
                         </svg>
                     </div>
-                    <div class="w-name">Perspektywa międzynarodowa</div>
-                    <div class="w-meta">Kursy i współprace z partnerami SEA-EU</div>
-                    <div class="w-tags"><span class="w-tag">wymiany</span><span class="w-tag">język angielski</span>
+                    <div class="w-name">Koła naukowe i projekty</div>
+                    <div class="w-meta">Rozwijanie zainteresowań i organizacja wydarzeń naukowych.</div>
+                    <div class="w-tags"><span class="w-tag">koła naukowe</span><span class="w-tag">konferencje</span>
                     </div>
                 </div>
                 <div class="w-card reveal d2">
@@ -171,9 +162,9 @@
                                 stroke-width="2" />
                         </svg>
                     </div>
-                    <div class="w-name">Przygotowanie do kariery</div>
-                    <div class="w-meta">Wsparcie Biura Karier i praktyki zawodowe</div>
-                    <div class="w-tags"><span class="w-tag">staże</span><span class="w-tag">rynek pracy</span></div>
+                    <div class="w-name">Współpraca międzyuczelniana</div>
+                    <div class="w-meta">Możliwość realizacji części programu w kraju lub za granicą.</div>
+                    <div class="w-tags"><span class="w-tag">mobilność</span><span class="w-tag">instytucje zagraniczne</span></div>
                 </div>
             </div>
         </div>
@@ -182,39 +173,39 @@
     <section class="section">
         <div class="container">
             <div class="sec-header center reveal">
-                <div class="eyebrow">Program kształcenia</div>
-                <h2 class="sec-title">Plan studiów w skrócie</h2>
+                <div class="eyebrow">Po studiach</div>
+                <h2 class="sec-title">Perspektywy zatrudnienia</h2>
             </div>
             <div class="steps-grid">
                 <div class="step reveal">
                     <div class="step-num">1</div>
-                    <div class="step-title">Semestry 1–2</div>
-                    <div class="step-desc">Podstawy kierunkowe i przedmioty ogólnouczelniane.</div>
-                    <div class="step-date">Fundament</div>
+                    <div class="step-title">Laboratoria</div>
+                    <div class="step-desc">Praca w laboratoriach badawczych, kontrolnych i diagnostycznych.</div>
+                    <div class="step-date">analityka</div>
                 </div>
                 <div class="step reveal d1">
                     <div class="step-num">2</div>
-                    <div class="step-title">Semestry 3–4</div>
-                    <div class="step-desc">Rozszerzenie wiedzy oraz pierwsze projekty zespołowe.</div>
-                    <div class="step-date">Rozwój</div>
+                    <div class="step-title">Przemysł i badania</div>
+                    <div class="step-desc">Udział w podstawowych pracach badawczych z materiałem biologicznym.</div>
+                    <div class="step-date">biotechnologia</div>
                 </div>
                 <div class="step reveal d2">
                     <div class="step-num">3</div>
-                    <div class="step-title">Semestry 5–6</div>
-                    <div class="step-desc">Przedmioty specjalizacyjne i praktyki zawodowe.</div>
-                    <div class="step-date">Specjalizacja</div>
+                    <div class="step-title">Ochrona przyrody</div>
+                    <div class="step-desc">Placówki ochrony przyrody i edukacji ekologicznej.</div>
+                    <div class="step-date">ekologia</div>
                 </div>
                 <div class="step reveal d3">
                     <div class="step-num">4</div>
-                    <div class="step-title">Projekty dyplomowe</div>
-                    <div class="step-desc">Praca z promotorem i przygotowanie pracy końcowej.</div>
-                    <div class="step-date">Dyplom</div>
+                    <div class="step-title">Sektor medyczny</div>
+                    <div class="step-desc">Możliwości pracy w placówkach medycznych i weterynaryjnych.</div>
+                    <div class="step-date">zdrowie</div>
                 </div>
                 <div class="step reveal d4">
                     <div class="step-num">5</div>
-                    <div class="step-title">Po studiach</div>
-                    <div class="step-desc">Wejście na rynek pracy lub kontynuacja na II stopniu.</div>
-                    <div class="step-date">Kariera</div>
+                    <div class="step-title">Instytucje kultury</div>
+                    <div class="step-desc">Muzea, wykopaliska archeologiczne i obsługa aparatury badawczej.</div>
+                    <div class="step-date">nauka i kultura</div>
                 </div>
             </div>
         </div>
@@ -224,8 +215,8 @@
         <div class="container">
             <div class="kontakt-grid">
                 <div class="reveal">
-                    <div class="eyebrow" style="margin-bottom:8px">Najważniejsze informacje</div>
-                    <div class="k-info-title">Szybkie podsumowanie kierunku</div>
+                    <div class="eyebrow" style="margin-bottom:8px">Rekrutacja</div>
+                    <div class="k-info-title">Kryteria przyjęć</div>
                     <div class="k-detail">
                         <div class="k-det-icon">
                             <svg viewBox="0 0 24 24" fill="none">
@@ -233,7 +224,7 @@
                                     stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <div><strong>Wydział</strong><span id="kierunekFacultySummary">Wydział Matematyki, Fizyki i Informatyki</span></div>
+                        <div><strong>Kryteria kwalifikacyjne</strong>konkurs świadectw dojrzałości</div>
                     </div>
                     <div class="k-detail">
                         <div class="k-det-icon">
@@ -241,7 +232,8 @@
                                 <path d="M4 6h16M4 12h16M4 18h10" stroke-width="2" stroke-linecap="round" />
                             </svg>
                         </div>
-                        <div><strong>Tryb i język</strong><span id="kierunekTrybJezyk">stacjonarne · polski</span></div>
+                        <div><strong>Przedmioty i mnożniki</strong>język obcy: 0,2 · biologia: 0,5 · jeden przedmiot z:
+                            chemia / fizyka / matematyka: 0,3</div>
                     </div>
                     <div class="k-detail">
                         <div class="k-det-icon">
@@ -250,17 +242,116 @@
                                 <path d="M16 2v4M8 2v4M3 10h18" stroke-width="2" stroke-linecap="round" />
                             </svg>
                         </div>
-                        <div><strong>Rekrutacja</strong>Start zapisów: 26 maja 2026 · zakończenie: 14 lipca 2026</div>
+                        <div><strong>Ważne zasady punktacji</strong>Poziom podstawowy × mnożnik, poziom rozszerzony ×
+                            mnożnik × 1,5; przy dwóch poziomach liczony jest wynik korzystniejszy; brak egzaminu z
+                            przedmiotu oznacza 0 punktów.</div>
+                    </div>
+                    <div class="k-detail" id="oplaty">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-width="2" />
+                                <polyline points="14 2 14 8 20 8" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div><strong>Opłaty</strong>Informacja na temat opłaty rekrutacyjnej oraz opłat za studia:<br>• opłata rekrutacyjna<br>• opłaty za studia (czesne)</div>
                     </div>
                 </div>
 
                 <div class="reveal d1">
                     <div class="k-links">
-                        <div class="k-links-title">Kolejne kroki</div>
-                        <a href="https://irk.ug.edu.pl">Załóż konto i wybierz kierunek w systemie IRK</a>
-                        <a href="index.html#dokumenty">Sprawdź listę wymaganych dokumentów</a>
-                        <a href="index.html#terminy">Zweryfikuj aktualne terminy i opłaty</a>
-                        <a href="index.html#kontakt">Skontaktuj się z Biurem Rekrutacji UG</a>
+                        <div class="k-links-title">Dodatkowe informacje</div>
+                        <a href="http://ug.edu.pl/rekrutacja/studia_i_i_ii_stopnia_oraz_jednolite_magisterskie/niezbednik_kandydata/dokumenty#d1">Wymagane dokumenty</a>
+                        <a href="#">Szczegółowe zasady klasyfikacji ocen: § 9 Uchwały Senatu (świadectwa zagraniczne)</a>
+                        <a href="#">Szczegółowe zasady klasyfikacji ocen: § 10 (IB, EB, egzamin dwujęzyczny)</a>
+                        <a href="#">Szczegółowe zasady klasyfikacji ocen: § 11 (stara matura)</a>
+                        <a href="#">Laureaci Festiwalu Młodych Naukowców E(x)plory z projektami przyrodniczo-medycznymi
+                            przyjmowani są z pominięciem postępowania kwalifikacyjnego</a>
+                        <a href="#" id="osoby-na-miejsce">Limit przyjęć zostanie podany po ustaleniu przez Rektora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="kontakt-wydzial">
+        <div class="container">
+            <div class="sec-header reveal">
+                <div class="eyebrow">Kontakt</div>
+                <h2 class="sec-title">Kontakt rekrutacyjny kierunku</h2>
+            </div>
+            <div class="kontakt-grid">
+                <div class="reveal">
+                    <div class="k-info-title">Osoba odpowiedzialna za nabór</div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="7" r="4" stroke-width="2" />
+                                <path d="M5.5 21a6.5 6.5 0 0 1 13 0" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div><strong>Koordynator rekrutacji — Biologia</strong>Biuro Rekrutacji Wydziału Biologii UG</div>
+                    </div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    stroke-width="2" />
+                                <polyline points="22,6 12,13 2,6" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div><strong>E-mail</strong>rekrutacja.biologia@ug.edu.pl</div>
+                    </div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div><strong>Telefon</strong>+48 58 523 60 00</div>
+                    </div>
+                </div>
+
+                <div class="reveal d1">
+                    <div class="k-info-title">Dane Wydziału Biologii UG</div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-width="2" />
+                                <circle cx="12" cy="10" r="3" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div><strong>Adres</strong>ul. Wita Stwosza 59, 80-308 Gdańsk</div>
+                    </div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke-width="2" />
+                                <polyline points="12 6 12 12 16 14" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div><strong>Godziny kontaktu</strong>Poniedziałek–Piątek: 9:00–15:00</div>
+                    </div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    stroke-width="2" />
+                                <polyline points="22,6 12,13 2,6" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div><strong>E-mail wydziału</strong>dziekanat.bio@ug.edu.pl</div>
+                    </div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div><strong>Telefon wydziału</strong>+48 58 523 60 50</div>
                     </div>
                 </div>
             </div>

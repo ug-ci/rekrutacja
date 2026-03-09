@@ -321,6 +321,10 @@
             padding: 0 24px;
         }
 
+        .kierunek-page .hero-inner {
+            grid-template-columns: 70% 30%;
+        }
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -491,7 +495,7 @@
 
         .hero-stat-num {
             font-family: 'DM Sans', sans-serif;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
             color: white;
             line-height: 1;
@@ -2120,6 +2124,23 @@
             width: 14px;
             height: 14px;
             stroke: currentColor;
+        }
+
+        .kierunek-page .hero-quick-links {
+            color: white;
+        }
+
+        .kierunek-page .hero-quick-links a,
+        .kierunek-page .hero-quick-links a:hover,
+        .kierunek-page .hero-quick-links a:focus-visible {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.22);
+        }
+
+        .kierunek-page .hero-card .hc-sub,
+        .kierunek-page .hero-quick-links,
+        .kierunek-page .hero-quick-links .k-links-title {
+            color: white;
         }
 
         .k-form {

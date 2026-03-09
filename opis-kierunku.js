@@ -28,11 +28,12 @@ function fallback(value, defaultValue) {
 }
 
 const params = new URLSearchParams(window.location.search);
-const kierunek = fallback(params.get('kierunek'), 'Informatyka');
-const wydzial = fallback(params.get('wydzial'), 'Wydział Matematyki, Fizyki i Informatyki');
+const kierunek = 'Biologia';
+const wydzial = fallback(params.get('wydzial'), 'Wydział Biologii UG');
 const poziom = fallback(params.get('poziom'), 'I stopnia');
 const tryb = fallback(params.get('tryb'), 'stacjonarne');
-const jezyk = fallback(params.get('jezyk'), 'polski');
+const jezyk = fallback(params.get('jezyk'), 'polski / angielski');
+const rok = fallback(params.get('rok'), '2025/26');
 
 const nameEl = document.getElementById('kierunekName');
 if (nameEl) nameEl.textContent = kierunek;
@@ -55,4 +56,16 @@ if (langEl) langEl.textContent = jezyk;
 const modeLangEl = document.getElementById('kierunekTrybJezyk');
 if (modeLangEl) modeLangEl.textContent = `${tryb} · ${jezyk}`;
 
-document.title = `${kierunek} — Opis kierunku | UG Rekrutacja 2026/2027`;
+const metaLevelEl = document.getElementById('metaLevel');
+if (metaLevelEl) metaLevelEl.textContent = poziom;
+
+const metaModeEl = document.getElementById('metaMode');
+if (metaModeEl) metaModeEl.textContent = tryb;
+
+const metaFacultyEl = document.getElementById('metaFaculty');
+if (metaFacultyEl) metaFacultyEl.textContent = wydzial;
+
+const metaYearEl = document.getElementById('metaYear');
+if (metaYearEl) metaYearEl.textContent = rok;
+
+document.title = `${kierunek} — Opis kierunku | UG Rekrutacja ${rok}`;
