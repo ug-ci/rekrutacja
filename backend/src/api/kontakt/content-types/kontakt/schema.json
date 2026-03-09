@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kontakty",
+  "info": {
+    "singularName": "kontakt",
+    "pluralName": "kontakty",
+    "displayName": "Kontakt",
+    "description": "Wiadomości z formularza kontaktowego"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "imie": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "temat": {
+      "type": "string"
+    },
+    "wiadomosc": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

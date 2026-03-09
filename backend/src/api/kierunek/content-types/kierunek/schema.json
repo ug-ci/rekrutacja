@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kierunki",
+  "info": {
+    "singularName": "kierunek",
+    "pluralName": "kierunki",
+    "displayName": "Kierunek",
+    "description": "Kierunek studiów"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nazwa": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nazwa",
+      "required": true
+    },
+    "poziom": {
+      "type": "enumeration",
+      "enum": ["i", "ii", "jednolite", "doktoraty", "podyplomowe"],
+      "required": true
+    },
+    "tryb": {
+      "type": "enumeration",
+      "enum": ["stacjonarne", "zaoczne", "wieczorowe"],
+      "required": true
+    },
+    "jezyk": {
+      "type": "enumeration",
+      "enum": ["polski", "angielski"],
+      "default": "polski"
+    },
+    "kategoria": {
+      "type": "enumeration",
+      "enum": [
+        "scisle-techniczne",
+        "biologiczne-przyrodnicze",
+        "ekonomiczne",
+        "spoleczne-prawne",
+        "medyczne-pedagogiczne"
+      ]
+    },
+    "opis": {
+      "type": "richtext"
+    },
+    "perspektywy": {
+      "type": "richtext"
+    },
+    "kryteria": {
+      "type": "richtext"
+    },
+    "wydzial": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::wydzial.wydzial",
+      "inversedBy": "kierunki"
+    },
+    "wydzialNazwa": {
+      "type": "string"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# Plan migracji: HTML/JS → WordPress (backend) + React (frontend)
+# Plan migracji: HTML/JS → Strapi (backend) + React (frontend)
 
 ## Analiza obecnego projektu
 

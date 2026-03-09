@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wydzialy",
+  "info": {
+    "singularName": "wydzial",
+    "pluralName": "wydzialy",
+    "displayName": "Wydział",
+    "description": "Wydział uczelni"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nazwa": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nazwa"
+    },
+    "lokalizacja": {
+      "type": "string"
+    },
+    "opis": {
+      "type": "richtext"
+    },
+    "kierunki": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kierunek.kierunek",
+      "mappedBy": "wydzial"
+    }
+  }
+}
