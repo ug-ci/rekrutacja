@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opis kierunku — UG Rekrutacja 2026/2027</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="opis-kierunku.js" defer></script>
+</head>
+
+<body>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#kierunki">Kierunki</a>
+        <a href="index.html#wydzialy">Wydziały</a>
+        <a href="index.html#terminy">Terminy i opłaty</a>
+        <a href="index.html#dokumenty">Dokumenty</a>
+        <a href="index.html#niezbednik">Niezbędnik</a>
+        <a href="index.html#kontakt" class="mobile-cta">Kontakt / IRK</a>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-mark">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                UG Rekrutacja 2026
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#kierunki">Kierunki</a></li>
+                <li><a href="index.html#wydzialy">Wydziały</a></li>
+                <li><a href="index.html#terminy">Terminy</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+                <li>
+                    <a href="https://irk.ug.edu.pl" class="nav-cta">
+                        Rejestracja IRK
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-inner">
+            <div>
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Opis kierunku
+                </div>
+                <h1 class="hero-title"><span id="kierunekName">Informatyka</span></h1>
+                <p class="hero-desc">
+                    Poznaj profil studiów, wymagania i perspektywy po ukończeniu kierunku. Strona prezentuje skrót
+                    najważniejszych informacji dla kandydatów.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://irk.ug.edu.pl" class="btn-primary">Aplikuj w IRK</a>
+                    <a href="index.html#kierunki" class="btn-ghost">Wróć do listy kierunków</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-num" id="kierunekLevel">I stopnia</div>
+                        <div class="hero-stat-label">poziom studiów</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num" id="kierunekMode">stacjonarne</div>
+                        <div class="hero-stat-label">tryb</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num" id="kierunekLang">polski</div>
+                        <div class="hero-stat-label">język</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-num">2026/27</div>
+                        <div class="hero-stat-label">nabór</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hc-header">
+                        <div class="hc-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="hc-title">Jednostka prowadząca</div>
+                            <div class="hc-sub" id="kierunekFaculty">Wydział Matematyki, Fizyki i Informatyki</div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="prog-label"><span>Profil</span><span>ogólnoakademicki</span></div>
+                        <div class="prog-bar">
+                            <div class="prog-fill" style="width:92%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="prog-label"><span>Nastawienie na praktykę</span><span>wysokie</span></div>
+                        <div class="prog-bar">
+                            <div class="prog-fill" style="width:84%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="prog-label"><span>Kompetencje językowe</span><span>PL/EN</span></div>
+                        <div class="prog-bar">
+                            <div class="prog-fill" style="width:76%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="sec-header reveal">
+                <div class="eyebrow">Dlaczego warto</div>
+                <h2 class="sec-title">Co zyskasz na tym kierunku?</h2>
+                <p class="sec-sub">Program łączy fundamenty teoretyczne z praktycznymi projektami i współpracą z
+                    otoczeniem społeczno-gospodarczym regionu.</p>
+            </div>
+            <div class="wydzialy-grid">
+                <div class="w-card reveal">
+                    <div class="w-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 20h9" stroke-width="2" stroke-linecap="round" />
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="w-name">Umiejętności praktyczne</div>
+                    <div class="w-meta">Praca projektowa od pierwszych semestrów</div>
+                    <div class="w-tags"><span class="w-tag">projekty</span><span class="w-tag">laboratoria</span>
+                    </div>
+                </div>
+                <div class="w-card reveal d1">
+                    <div class="w-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10A15 15 0 0 1 8 12a15 15 0 0 1 4-10z"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="w-name">Perspektywa międzynarodowa</div>
+                    <div class="w-meta">Kursy i współprace z partnerami SEA-EU</div>
+                    <div class="w-tags"><span class="w-tag">wymiany</span><span class="w-tag">język angielski</span>
+                    </div>
+                </div>
+                <div class="w-card reveal d2">
+                    <div class="w-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="w-name">Przygotowanie do kariery</div>
+                    <div class="w-meta">Wsparcie Biura Karier i praktyki zawodowe</div>
+                    <div class="w-tags"><span class="w-tag">staże</span><span class="w-tag">rynek pracy</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="sec-header center reveal">
+                <div class="eyebrow">Program kształcenia</div>
+                <h2 class="sec-title">Plan studiów w skrócie</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step reveal">
+                    <div class="step-num">1</div>
+                    <div class="step-title">Semestry 1–2</div>
+                    <div class="step-desc">Podstawy kierunkowe i przedmioty ogólnouczelniane.</div>
+                    <div class="step-date">Fundament</div>
+                </div>
+                <div class="step reveal d1">
+                    <div class="step-num">2</div>
+                    <div class="step-title">Semestry 3–4</div>
+                    <div class="step-desc">Rozszerzenie wiedzy oraz pierwsze projekty zespołowe.</div>
+                    <div class="step-date">Rozwój</div>
+                </div>
+                <div class="step reveal d2">
+                    <div class="step-num">3</div>
+                    <div class="step-title">Semestry 5–6</div>
+                    <div class="step-desc">Przedmioty specjalizacyjne i praktyki zawodowe.</div>
+                    <div class="step-date">Specjalizacja</div>
+                </div>
+                <div class="step reveal d3">
+                    <div class="step-num">4</div>
+                    <div class="step-title">Projekty dyplomowe</div>
+                    <div class="step-desc">Praca z promotorem i przygotowanie pracy końcowej.</div>
+                    <div class="step-date">Dyplom</div>
+                </div>
+                <div class="step reveal d4">
+                    <div class="step-num">5</div>
+                    <div class="step-title">Po studiach</div>
+                    <div class="step-desc">Wejście na rynek pracy lub kontynuacja na II stopniu.</div>
+                    <div class="step-date">Kariera</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="kontakt">
+        <div class="container">
+            <div class="kontakt-grid">
+                <div class="reveal">
+                    <div class="eyebrow" style="margin-bottom:8px">Najważniejsze informacje</div>
+                    <div class="k-info-title">Szybkie podsumowanie kierunku</div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M3 21h18M9 21V7l3-3 3 3v14" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div><strong>Wydział</strong><span id="kierunekFacultySummary">Wydział Matematyki, Fizyki i Informatyki</span></div>
+                    </div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M4 6h16M4 12h16M4 18h10" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div><strong>Tryb i język</strong><span id="kierunekTrybJezyk">stacjonarne · polski</span></div>
+                    </div>
+                    <div class="k-detail">
+                        <div class="k-det-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="2" />
+                                <path d="M16 2v4M8 2v4M3 10h18" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div><strong>Rekrutacja</strong>Start zapisów: 26 maja 2026 · zakończenie: 14 lipca 2026</div>
+                    </div>
+                </div>
+
+                <div class="reveal d1">
+                    <div class="k-links">
+                        <div class="k-links-title">Kolejne kroki</div>
+                        <a href="https://irk.ug.edu.pl">Załóż konto i wybierz kierunek w systemie IRK</a>
+                        <a href="index.html#dokumenty">Sprawdź listę wymaganych dokumentów</a>
+                        <a href="index.html#terminy">Zweryfikuj aktualne terminy i opłaty</a>
+                        <a href="index.html#kontakt">Skontaktuj się z Biurem Rekrutacji UG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-mark"><svg viewBox="0 0 24 24" fill="none">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" stroke-width="2" stroke-linecap="round" />
+                            </svg></div>
+                        UG Rekrutacja 2026
+                    </div>
+                    <p>Uniwersytet Gdański — kierunki studiów, terminy i komplet informacji dla kandydatów.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Przejdź do</h4>
+                    <ul>
+                        <li><a href="index.html#kierunki">Kierunki studiów</a></li>
+                        <li><a href="index.html#wydzialy">Wydziały</a></li>
+                        <li><a href="index.html#terminy">Terminy</a></li>
+                        <li><a href="index.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Linki</h4>
+                    <ul>
+                        <li><a href="https://irk.ug.edu.pl">System IRK</a></li>
+                        <li><a href="https://ug.edu.pl/rekrutacja">Strona rekrutacji UG</a></li>
+                        <li><a href="https://ug.edu.pl">Strona główna UG</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Uniwersytet Gdański. Wszelkie prawa zastrzeżone.</span>
+                <span style="font-size:12px;letter-spacing:0.04em">polski.ug.edu.pl / rekrutacja</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

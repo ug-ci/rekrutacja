@@ -1134,6 +1134,9 @@
             border: 1.5px solid var(--border);
             border-radius: var(--r-lg);
             padding: 24px;
+            display: block;
+            text-decoration: none;
+            color: inherit;
             transition: all 0.3s;
             cursor: pointer;
             position: relative;

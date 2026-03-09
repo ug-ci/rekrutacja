@@ -350,7 +350,7 @@ Zarządzanie, studia niestacjonarne - zaoczne II stopnia
             const programs = parseKierunkiData(kierunkiRawData);
 
             grid.innerHTML = programs.map(program => `
-                <div class="k-card reveal" data-category="${program.categories.join(',')}" data-level="${program.level}" data-mode="${program.mode.join(',')}" data-lang="${program.lang}">
+                <a class="k-card reveal" href="opis-kierunku.html?kierunek=${encodeURIComponent(program.name)}&wydzial=${encodeURIComponent(program.faculty)}&poziom=${encodeURIComponent(levelLabel(program.level))}&tryb=${encodeURIComponent(modeLabel(program.mode))}&jezyk=${encodeURIComponent(program.lang)}" data-category="${program.categories.join(',')}" data-level="${program.level}" data-mode="${program.mode.join(',')}" data-lang="${program.lang}">
                     <div class="k-faculty">${escapeHtml(program.faculty)}</div>
                     <div class="k-name">${escapeHtml(program.name)}</div>
                     <div class="k-meta">
@@ -363,7 +363,7 @@ Zarządzanie, studia niestacjonarne - zaoczne II stopnia
                                 <path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg></div>
                     </div>
-                </div>
+                </a>
             `).join('');
 
             grid.querySelectorAll('.reveal').forEach(el => ro.observe(el));
@@ -442,10 +442,6 @@ Zarządzanie, studia niestacjonarne - zaoczne II stopnia
                     html += `<span class="pagination-sep" aria-hidden="true">...</span>`;
                 } else {
                     html += `<button type="button" class="pagination-btn ${item === current ? 'active' : ''}" data-page="${item}">${item}</button>`;
-                }
-
-                if (index < pageItems.length - 1) {
-                    html += `<span class="pagination-sep" aria-hidden="true">|</span>`;
                 }
             });
 
@@ -527,9 +523,11 @@ Zarządzanie, studia niestacjonarne - zaoczne II stopnia
             if (isHidden) {
                 panel.removeAttribute('hidden');
                 button.setAttribute('aria-expanded', 'true');
+                button.textContent = 'Ukryj filtry';
             } else {
                 panel.setAttribute('hidden', '');
                 button.setAttribute('aria-expanded', 'false');
+                button.textContent = 'Filtruj';
             }
         });
 
